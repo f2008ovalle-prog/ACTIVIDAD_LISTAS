@@ -1,0 +1,22 @@
+def contar_pares_e_impares(lista):
+    """Cuenta cuántos números pares e impares hay en una lista."""
+    pares = 0
+    impares = 0
+    for numero in lista:
+        if numero % 2 == 0:
+            pares += 1
+        else:
+            impares += 1
+    return pares, impares
+
+if __name__ == "__main__":
+    print("--- Contar Pares e Impares ---")
+    # Entrada de datos convertida a lista de enteros
+    entrada = input("Ingresa números enteros separados por espacio: ")
+    numeros = [int(x) for x in entrada.split()]
+    
+    total_pares, total_impares = contar_pares_e_impares(numeros)
+    
+    print(f"\nLista ingresada: {numeros}")
+    print(f"Cantidad de pares: {total_pares}")
+    print(f"Cantidad de impares: {total_impares}")
