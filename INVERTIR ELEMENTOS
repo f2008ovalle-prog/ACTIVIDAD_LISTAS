@@ -1,0 +1,14 @@
+def invertir_lista(lista):
+    """Retorna una nueva lista con los elementos en orden inverso."""
+    # Se genera una copia invertida utilizando slicing
+    return lista[::-1]
+
+if __name__ == "__main__":
+    print("--- Invertir Elementos de una Lista ---")
+    entrada = input("Ingresa elementos separados por espacio: ")
+    elementos = entrada.split()
+    
+    lista_invertida = invertir_lista(elementos)
+    
+    print(f"\nLista original: {elementos}")
+    print(f"Lista invertida: {lista_invertida}")
