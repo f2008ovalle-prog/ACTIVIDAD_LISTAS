@@ -1,0 +1,26 @@
+def obtener_mayor_y_menor(lista):
+    """Encuentra el valor máximo y mínimo dentro de una lista de números."""
+    if not lista:
+        return None, None
+    
+    mayor = lista[0]
+    menor = lista[0]
+    
+    for numero in lista:
+        if numero > mayor:
+            mayor = numero
+        if numero < menor:
+            menor = numero
+            
+    return mayor, menor
+
+if __name__ == "__main__":
+    print("--- Encontrar Número Mayor y Menor ---")
+    entrada = input("Ingresa números separados por espacio: ")
+    numeros = [float(x) for x in entrada.split()]
+    
+    maximo, minimo = obtener_mayor_y_menor(numeros)
+    
+    print(f"\nLista: {numeros}")
+    print(f"El número mayor es: {maximo}")
+    print(f"El número menor es: {minimo}")
