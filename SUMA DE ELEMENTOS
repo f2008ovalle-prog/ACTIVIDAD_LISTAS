@@ -1,0 +1,16 @@
+def sumar_elementos(lista):
+    """Calcula la suma total de los elementos numéricos de una lista."""
+    total = 0
+    for elemento in lista:
+        total += elemento
+    return total
+
+if __name__ == "__main__":
+    print("--- Suma de Elementos de una Lista ---")
+    entrada = input("Ingresa números separados por espacio: ")
+    numeros = [float(x) for x in entrada.split()]
+    
+    resultado = sumar_elementos(numeros)
+    
+    print(f"\nLista de números: {numeros}")
+    print(f"La suma total es: {resultado}")
